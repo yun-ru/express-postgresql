@@ -1,0 +1,13 @@
+{
+  "name": "exp-mvc",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "moment": "^2.14.1"
+  }
+}

@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+
+  form(method="post")
+    .row
+      .col-sm-4
+        .form-group
+          label Name
+          input.form-control(type="text", name="name")
+        .form-group
+          button.btn.btn-primary submit
+  each item in people
+    hr
+    .guy(data-id=item.id)
+      p= item.name
+        span.text-muted  - Last Update:  #{moment(item.createdAt).format('MM/DD HH:mm')}
+        button.delete.btn.btn-danger.btn-sm.pull-right Delete
+      .form-inline
+        input.form-control.input-sm(type="text", value=item.name)
+        button.update.btn.btn-success.btn-sm Update
